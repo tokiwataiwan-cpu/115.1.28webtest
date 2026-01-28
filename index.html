@@ -3,149 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>您的品牌名稱 - 專業諮詢服務</title>
+    <title>第一顧問 - 遺產繼承試算系統</title>
     <style>
-        /* 基礎樣式設定 */
         :root {
-            --primary-color: #2c3e50; /* 主題深藍色 */
-            --accent-color: #3498db;  /* 強調藍色 */
-            --text-color: #333;
-            --light-bg: #f4f7f6;
+            --primary: #2c3e50; /* 專業深藍 */
+            --gold: #b8860b;    /* 穩重金 */
+            --bg: #f8f9fa;
         }
-
-        body {
-            font-family: "Microsoft JhengHei", Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            color: var(--text-color);
-        }
-
-        /* 導覽列 */
-        nav {
-            background: #fff;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-        }
-
-        /* 看板區 (Hero Section) */
-        .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
-                        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            color: white;
-            padding: 100px 5%;
-            text-align: center;
-        }
-
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-
-        /* 內容區塊 */
-        section { padding: 80px 5%; max-width: 1200px; margin: auto; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-
-        /* 服務項目網格 */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--light-bg);
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .card:hover { transform: translateY(-10px); }
-
-        /* 頁尾 */
-        footer {
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 50px;
-        }
-
-        /* 響應式調整 */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            nav ul { display: none; } /* 簡化手機版選單 */
-        }
+        body { font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; background: var(--bg); margin: 0; color: #333; }
+        nav { background: white; padding: 15px 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
+        .logo { font-size: 1.2rem; font-weight: bold; color: var(--primary); letter-spacing: 1px; }
+        
+        .container { max-width: 800px; margin: 40px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        h1 { color: var(--primary); text-align: center; border-bottom: 2px solid var(--gold); padding-bottom: 10px; }
+        
+        .intro { text-align: center; color: #666; margin-bottom: 30px; }
+        .calc-box { background: #fdfdfd; border: 1px solid #eee; padding: 20px; border-radius: 8px; }
+        
+        .footer { text-align: center; margin-top: 50px; padding: 20px; color: #999; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">您的品牌標誌</div>
+<nav>
+    <div class="logo">第一顧問 Top One Consulting</div>
+</nav>
+
+<div class="container">
+    <h1>遺產法律繼承試算</h1>
+    <p class="intro">專業 · 精準 · 夥伴 — 為您釐清法律權益</p>
+    
+    <div class="calc-box">
+        <h3>計算機開發中...</h3>
+        <p>目前網頁已成功上線。下一步我們可以開始實作：</p>
         <ul>
-            <li><a href="#home">首頁</a></li>
-            <li><a href="#services">服務</a></li>
-            <li><a href="#contact">聯絡我們</a></li>
+            <li>有無配偶之判斷邏輯</li>
+            <li>第一至第四順位繼承人輸入</li>
+            <li>應繼分比例自動計算</li>
         </ul>
-    </nav>
-
-    <div class="hero" id="home">
-        <h1>專業、精準、值得信賴</h1>
-        <p>為您提供全方位的專業諮詢與解決方案</p>
     </div>
+</div>
 
-    <section id="services">
-        <h2 class="section-title">我們的服務</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>專業諮詢</h3>
-                <p>提供最深入的行業分析與建議，助您做出正確決定。</p>
-            </div>
-            <div class="card">
-                <h3>精準執行</h3>
-                <p>標準化流程確保每個細節都完美到位，降低風險。</p>
-            </div>
-            <div class="card">
-                <h3>長期夥伴</h3>
-                <p>我們不只是服務提供者，更是您事業與生活的堅實夥伴。</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="section-title">聯絡我們</h2>
-        <div style="text-align: center;">
-            <p>如果您有任何需求，歡迎隨時聯繫我們。</p>
-            <p>Email: contact@example.com</p>
-            <p>電話: 02-1234-5678</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 您的品牌名稱. All rights reserved.</p>
-    </footer>
+<div class="footer">
+    &copy; 2026 第一顧問 專業團隊. 專注於遺囑、公證與長期諮詢服務.
+</div>
 
 </body>
 </html>
