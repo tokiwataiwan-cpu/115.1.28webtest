@@ -77,4 +77,75 @@
         .card {
             background: var(--light-bg);
             padding: 30px;
-            border-radius: 8
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        /* 頁尾 */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        /* 響應式調整 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav ul { display: none; } /* 簡化手機版選單 */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">您的品牌標誌</div>
+        <ul>
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#services">服務</a></li>
+            <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="home">
+        <h1>專業、精準、值得信賴</h1>
+        <p>為您提供全方位的專業諮詢與解決方案</p>
+    </div>
+
+    <section id="services">
+        <h2 class="section-title">我們的服務</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>專業諮詢</h3>
+                <p>提供最深入的行業分析與建議，助您做出正確決定。</p>
+            </div>
+            <div class="card">
+                <h3>精準執行</h3>
+                <p>標準化流程確保每個細節都完美到位，降低風險。</p>
+            </div>
+            <div class="card">
+                <h3>長期夥伴</h3>
+                <p>我們不只是服務提供者，更是您事業與生活的堅實夥伴。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">聯絡我們</h2>
+        <div style="text-align: center;">
+            <p>如果您有任何需求，歡迎隨時聯繫我們。</p>
+            <p>Email: contact@example.com</p>
+            <p>電話: 02-1234-5678</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 您的品牌名稱. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
